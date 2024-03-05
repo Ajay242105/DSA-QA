@@ -1,4 +1,5 @@
-// better solution=>0(n2)
+// better solution=>0(2(n*m))
+// space com=>0(n*m)
 
 /*
 Problem statement
