@@ -2,7 +2,10 @@
 #include <vector>
 #include <stack>
 using namespace std;
-
+/*
+tc=>0(n)
+SC=>0(n)
+*/
 struct node
 {
   int data;
