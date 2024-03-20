@@ -2,10 +2,7 @@
 #include <vector>
 #include <stack>
 using namespace std;
-/*
-tc=>0(n)
-SC=>0(n)
-*/
+
 struct node
 {
   int data;
@@ -41,6 +38,31 @@ vector<int> preOrderTraversal(node *root)
   }
   return preOrder;
 }
+// left,root,right
+vector<int> inOrderTraversal(node *root)
+{
+  vector<int> inOrder;
+  node *rt = root;
+  stack<node *> st;
+  while (true)
+  {
+    if (rt != NULL)
+    {
+      st.push(rt);
+      rt = rt->left;
+    }
+    else
+    {
+      if (st.empty())
+        break;
+      rt = st.top();
+      st.pop();
+      inOrder.push_back(rt->data);
+      rt = rt->right;
+    }
+  }
+  return inOrder;
+}
 
 int main()
 {
@@ -49,12 +71,21 @@ int main()
   root->right = new node(3);
   root->left->left = new node(4);
   root->left->right = new node(5);
-  root->right->left = new node(7);
+  root->right->left = new node(6);
 
   vector<int> result = preOrderTraversal(root);
+  vector<int> result2 = inOrderTraversal(root);
+
+  cout << "Preorder traversal:" << endl;
   for (int i = 0; i < result.size(); i++)
   {
     cout << result[i] << " ";
+  }
+  cout << "\nInorder traversal:" << endl;
+
+  for (int i = 0; i < result2.size(); i++)
+  {
+    cout << result2[i] << " ";
   }
   return 0;
 }
