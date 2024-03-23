@@ -1,6 +1,8 @@
 // maxDepth of tree using recursive
 #include <iostream>
 using namespace std;
+// tc=0(n)
+// sc=0(n)
 struct node
 {
   int data;
