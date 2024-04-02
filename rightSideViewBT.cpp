@@ -51,7 +51,7 @@ public:
     recursion(root, 0, result);
     return result;
   }
-
+  // right view
   void recursion(TreeNode *root, int level, vector<int> &res)
   {
     if (root == nullptr)
@@ -61,4 +61,14 @@ public:
     recursion(root->right, level + 1, res);
     recursion(root->left, level + 1, res);
   }
+  // left view
+  //  void recursion(TreeNode *root, int level, vector<int> &res)
+  //  {
+  //    if (root == nullptr)
+  //      return;
+  //    if (res.size() == level)
+  //      res.push_back(root->val);
+  //    recursion(root->left, level + 1, res);
+  //    recursion(root->right, level + 1, res);
+  //  }
 };
