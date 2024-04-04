@@ -54,7 +54,7 @@ public:
   // right view
   void recursion(TreeNode *root, int level, vector<int> &res)
   {
-    if (root == nullptr)
+    if (root == NULL)
       return;
     if (res.size() == level)
       res.push_back(root->val);
