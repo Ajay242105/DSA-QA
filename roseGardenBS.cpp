@@ -43,7 +43,7 @@ Constraints :
 Time limit: 1 sec
 */
 
-bool possible(vector<int> &arr, int day, int m, int k)
+bool possible(vector<int> &arr, int day, int m, int k) // m->no. of bouquets,k ->no. of adjacent flower needed
 {
   int cnt = 0;
   int bouquets = 0;
